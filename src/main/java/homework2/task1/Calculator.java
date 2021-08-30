@@ -1,3 +1,5 @@
+package homework2.task1;
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -5,8 +7,8 @@ public class Calculator {
 
     public static void main(String[] args) {
         int a = getInt();
-        int b = getInt();
         char operation = getOperation();
+        int b = getInt();
         int result = calc(a, b, operation);
         System.out.println("Result: " + result);
     }
