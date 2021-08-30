@@ -37,24 +37,17 @@ public class Calculator {
         return operation;
     }
 
-    public static int calc(int A, int B, char operation) {
+    public static int calc(int a, int b, char operation) {
         int result;
         switch (operation) {
-            case '+':
-                result = A+B;
-                break;
-            case '-':
-                result = A-B;
-                break;
-            case '*':
-                result = A*B;
-                break;
-            case '/':
-                result = A/B;
-                break;
-            default:
+            case '+' -> result = a + b;
+            case '-' -> result = a - b;
+            case '*' -> result = a * b;
+            case '/' -> result = a / b;
+            default -> {
                 System.out.println("Error. Try again.");
-                result = calc(A, B, getOperation());
+                result = calc(a, b, getOperation());
+            }
         }
         return result;
     }
