@@ -6,16 +6,20 @@ public class Calculator {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-       Calculator app = new Calculator();
-       app.startCalculator();
+        Calculator app = new Calculator();
+        app.startCalculator();
     }
 
     public void startCalculator() {
         int a = getInt();
         char operation = getOperation();
         int b = getInt();
-        int result = calc(a, b, operation);
-        System.out.println("Result= " + result);
+        if (b == 0 && operation == '/') {
+            System.out.println("Error. Divide by zero.");
+        } else {
+            int result = calc(a, b, operation);
+            System.out.println("Result= " + result);
+        }
     }
 
     public int getInt() {
