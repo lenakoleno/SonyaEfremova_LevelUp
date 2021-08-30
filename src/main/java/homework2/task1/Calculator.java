@@ -6,50 +6,55 @@ public class Calculator {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+       Calculator app = new Calculator();
+       app.startCalculator();
+    }
+
+    public void startCalculator() {
         int a = getInt();
         char operation = getOperation();
         int b = getInt();
         int result = calc(a, b, operation);
-        System.out.println("Result: " + result);
+        System.out.println("Result= " + result);
     }
 
-    public static int getInt() {
+    public int getInt() {
+        boolean isCorrect = false;
         System.out.println("Enter the number:");
-        int num;
-        if (scanner.hasNextInt()) {
-            num = scanner.nextInt();
-        } else {
-            System.out.println("Error. Try again.");
-            scanner.next();
-            num = getInt();
+        int num = 0;
+        while (!isCorrect) {
+            if (scanner.hasNextInt()) {
+                num = scanner.nextInt();
+                isCorrect = true;
+            } else {
+                System.out.println("Error. Try again.");
+            }
         }
         return num;
     }
 
-    public static char getOperation() {
+    public char getOperation() {
+        boolean isCorrect = false;
         System.out.println("Enter the arithmetic operation:");
-        char operation;
-        if (scanner.hasNext()) {
+        char operation = 0;
+        while (!isCorrect) {
             operation = scanner.next().charAt(0);
-        } else {
-            System.out.println("Error. Try again.");
-            scanner.next();
-            operation = getOperation();
+            isCorrect = operation == '+' || operation == '-' || operation == '*' || operation == '/';
+            if (!isCorrect) {
+                System.out.println("Error. Try again.");
+            }
         }
         return operation;
     }
 
-    public static int calc(int a, int b, char operation) {
-        int result;
+    public int calc(int a, int b, char operation) {
+        int result = 0;
         switch (operation) {
             case '+' -> result = a + b;
             case '-' -> result = a - b;
             case '*' -> result = a * b;
             case '/' -> result = a / b;
-            default -> {
-                System.out.println("Error. Try again.");
-                result = calc(a, b, getOperation());
-            }
+            default -> System.exit(-1);
         }
         return result;
     }
