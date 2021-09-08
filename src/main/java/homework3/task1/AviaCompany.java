@@ -38,6 +38,7 @@ public class AviaCompany {
         for (AirCraft airCraft : name) {
             System.out.println(airCraft.getFlightRange());
         }
+        app.neededPlane(name);
     }
 
     public void totalCapacity(List<AirCraft> airCrafts) {
@@ -54,5 +55,16 @@ public class AviaCompany {
             sum2 += airCraft.getCargoCapacity();
         }
         System.out.println("Total cargo capacity: " + sum2);
+    }
+
+    public void neededPlane(List<AirCraft> airCrafts) {
+        for (int i = 0; i < airCrafts.size(); i++) {
+            AirCraft airCraft = airCrafts.get(i);
+
+            if (airCraft instanceof Plane && airCraft.getFlightRange() > 40 && airCraft.getCargoCapacity() > 45
+                && airCraft.getCapacity() < 40) {
+                System.out.println("Needed plane: " + ((Plane) airCraft).getType());
+            }
+        }
     }
 }

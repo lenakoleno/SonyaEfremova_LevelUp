@@ -8,4 +8,7 @@ public class Plane extends AirCraft {
         this.type = type;
     }
 
+    public TypeOfPlane getType() {
+        return type;
+    }
 }
