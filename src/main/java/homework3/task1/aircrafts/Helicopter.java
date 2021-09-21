@@ -7,4 +7,8 @@ public class Helicopter extends AirCraft {
         super(capacity, cargoCapacity, flightRange);
         this.type = type;
     }
+
+    public TypeOfHelicopter getType() {
+        return type;
+    }
 }

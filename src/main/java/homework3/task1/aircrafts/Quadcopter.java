@@ -7,4 +7,9 @@ public class Quadcopter extends AirCraft {
         super(capacity, cargoCapacity, flightRange);
         this.type = type;
     }
+
+    public TypeOfQuadcopter getType() {
+        return type;
+    }
 }
+
