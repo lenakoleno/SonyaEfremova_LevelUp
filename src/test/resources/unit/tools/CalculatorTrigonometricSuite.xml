@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator Trigonometric Suite">
+  <test name="Calculator Trigonometric Tests">
+    <classes>
+      <class name="hw5.unit.tools.CalculatorTgClassTest"/>
+      <class name="hw5.unit.tools.CalculatorCtgTest"/>
+      <class name="hw5.unit.tools.CalculatorSinClassTest"/>
+      <class name="hw5.unit.tools.CalculatorCosTest"/>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator Sum and Mult Suite">
+  <test name="Calculator Sum and Mult Tests">
+    <classes>
+      <class name="hw5.unit.tools.CalculatorSumClassTest"/>
+      <class name="hw5.unit.tools.CalculatorMultClassTest"/>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator All Tests Suite">
+  <test name="Calculator All Tests">
+    <classes>
+      <class name="hw5.unit.tools.CalculatorSumClassTest"/>
+      <class name="hw5.unit.tools.CalculatorSubClassTest"/>
+      <class name="hw5.unit.tools.CalculatorTgClassTest"/>
+      <class name="hw5.unit.tools.CalculatorSqrtClassTest"/>
+      <class name="hw5.unit.tools.CalculatorSinClassTest"/>
+      <class name="hw5.unit.tools.CalculatorPowClassTest"/>
+      <class name="hw5.unit.tools.CalculatorMultClassTest"/>
+      <class name="hw5.unit.tools.CalculatorDivClassTest"/>
+      <class name="hw5.unit.tools.CalculatorIsPositiveTest"/>
+      <class name="hw5.unit.tools.CalculatorIsNegativeTest"/>
+      <class name="hw5.unit.tools.CalculatorCosTest"/>
+      <class name="hw5.unit.tools.CalculatorCtgTest"/>
+    </classes>
+  </test>
+</suite>
